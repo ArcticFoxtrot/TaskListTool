@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="TaskItem" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; min-width: auto; min-height: auto; max-height: 30px;">
+        <ui:Toggle name="taskStatusToggle" />
+        <ui:Label tabindex="-1" text="REALLY LONG DESCRIPTION OF TASK AAAAAAAA" display-tooltip-when-elided="true" name="taskNameLabel" style="-unity-text-align: middle-left; margin-left: 10px; margin-right: 6px; margin-top: 6px; margin-bottom: 6px;" />
+    </ui:VisualElement>
+</ui:UXML>

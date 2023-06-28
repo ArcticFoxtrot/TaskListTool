@@ -1,0 +1,30 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/TaskList/Editor/EditorWindow/TaskListEditor.uss?fileID=7433441132597879392&amp;guid=47e240eec4cc5a840a0fe7071059700c&amp;type=3#TaskListEditor" />
+    <ui:VisualElement name="loadTasks" class="container" style="background-color: rgba(0, 0, 0, 0);">
+        <uie:ObjectField label="Saved Tasks" name="savedTasksObjectField" class="inputField" />
+        <ui:Button text="Load Tasks" display-tooltip-when-elided="true" name="loadTasksButton" class="button" />
+    </ui:VisualElement>
+    <ui:VisualElement name="searchTasks" class="container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; flex-shrink: 0;">
+        <ui:Label tabindex="-1" text="Search Tasks&#10;" display-tooltip-when-elided="true" name="searchTasksHeader" style="flex-grow: 0; height: 100%;" />
+        <uie:ToolbarSearchField focusable="true" name="searchBar" style="flex-grow: 1;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="addTasks" class="container" style="background-color: rgba(0, 0, 0, 0);">
+        <ui:Label tabindex="-1" text="Add New Task" display-tooltip-when-elided="true" name="addTasksHeader" />
+        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; height: 30px;">
+            <ui:TextField picking-mode="Ignore" name="taskNameInput" class="inputField" style="flex-grow: 1; width: 75%;" />
+            <ui:Button text="Add Task" display-tooltip-when-elided="true" name="addTaskButton" class="button" style="background-color: rgb(0, 113, 30); color: rgb(255, 255, 255); -unity-font-style: bold; width: 20%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:Label tabindex="-1" text="Current Tasks" display-tooltip-when-elided="true" />
+    <ui:VisualElement name="showTasks" class="taskList expand" style="background-color: rgba(0, 0, 0, 0); border-left-color: rgb(0, 115, 19); border-right-color: rgb(0, 115, 19); border-top-color: rgb(0, 115, 19); border-bottom-color: rgb(0, 115, 19); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;">
+        <ui:ScrollView name="taskListScrollView" style="flex-grow: 1;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="trackTasks" class="container" style="background-color: rgba(0, 0, 0, 0);">
+        <ui:Button text="Save Progress" display-tooltip-when-elided="true" name="saveProgressButton" class="button" />
+        <ui:Label tabindex="-1" text="Progress" display-tooltip-when-elided="true" style="-unity-text-align: middle-center;" />
+        <ui:ProgressBar value="0.5" title="--%" name="taskProgressBar" high-value="1" />
+    </ui:VisualElement>
+    <ui:VisualElement name="notifications" class="container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="notificationText" />
+    </ui:VisualElement>
+</ui:UXML>
